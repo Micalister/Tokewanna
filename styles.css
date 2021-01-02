@@ -1,0 +1,611 @@
+/* Global styles */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* NavBar */
+
+header {
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.nav-brand {
+  width: 3rem;
+}
+
+.menu-icons i{
+  font-size: 3.5rem;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+.close i{
+  color: #b7410e;
+}
+
+.nav-list {
+  width: 25rem;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: -26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  transition: all 650ms ease-in-out;
+}
+
+.nav-list.active{
+  right: 0;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.nav-item {
+  margin: 1.5rem 0;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #000;
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: #b7410e;
+  transition: 0.5s;
+}
+
+/* Header */
+
+.mountain {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(0deg, rgba(118, 126, 118, 0.4) 20%, rgba(40, 41, 40, 0.9) 100%), url("images/Tokewanna.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.mountain::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 4.7rem;
+  background: url("images/wave-small.png") center no-repeat;
+  background-size: cover;
+}
+
+.main-message {
+  width: 100%;
+  color: #fafafa;
+  text-transform: uppercase;
+  transform: translateY(20%);
+  margin: 0 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-message h3{
+  font-size: 1rem;
+}
+
+.main-message h1{
+  font-family: 'Aldrich', sans-serif;
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  background-color: #b7410e;
+  border-radius: 2rem;
+  color: #fafafa;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  transition: background-color 650ms;
+}
+
+.btn:hover{
+  background-color: #702809;
+}
+
+/* Experience Text */
+
+.experience-outdoors {
+  margin-bottom: 4rem;
+}
+
+.title-heading{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10rem;
+  color: rgba(0, 0, 0, .7);
+}
+
+.title-heading h3{
+  font-size: 1.4rem;
+}
+
+.title-heading h1{
+  font-family: 'Aldrich', sans-serif;
+  font-size: 2rem;
+  margin: .5rem 0 1rem;
+}
+
+.title-heading p{
+  text-transform: lowercase;
+}
+
+/* Experience Grid */
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2.5rem;
+}
+
+.activities-grid-item {
+  height: 40rem;
+  padding: 5rem;
+  color: #fafafa;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.activities-grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-100deg, rgba(118, 126, 118, 0.4) 20%, rgba(40, 41, 40, 0.9) 100%);
+  z-index: -1;
+}
+
+.stars {
+  background: url("images/stars.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.hiking {
+  background: url("images/hikes.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.camping {
+  background: url("images/camping.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.biking {
+  background: url("images/biking.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.lake {
+  background: url("images/lake.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.dog {
+  background: url("images/dog.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.activities-grid-item i{
+  font-size: 4rem;
+  color: #b7410e;
+}
+
+.activities-grid-item h1{
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Middle Break */
+
+.wambodajwogo {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(1deg, rgba(118, 126, 118, 0.4) 20%, rgba(40, 41, 40, 0.9) 100%), url("images/wambodajwogo.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.wambodajwogo::before{
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 4.7rem;
+  background: url("images/wave-small-reversed.png") center no-repeat;
+  background-size: cover;
+}
+
+.wambodajwogo-box {
+  width: 100%;
+  color: #fafafa;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.wambodajwogo-text {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 2rem;
+}
+
+.wambodajwogo-text p {
+  padding: 0 1.5rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.wambodajwogo-text i{
+  position: absolute;
+  top: -8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10rem;
+  color: #b7410e;
+  z-index: -1;
+}
+
+/* Adventure Section */
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, .7);
+}
+
+.bottom-title h3{
+  font-size: 1.4rem;
+}
+
+.bottom-title h1{
+  font-family: 'Aldrich', sans-serif;
+  font-size: 2rem;
+  margin: .5rem 0 1rem;
+}
+
+.bottom-title p{
+  text-transform: lowercase;
+}
+
+/* Footer */
+
+footer {
+  max-width: 98rem;
+  margin: auto;
+  padding: 6rem 0rem;
+  background: url("images/mountains.png") center no-repeat;
+  background-size: cover;
+}
+
+/* Media Quierys */
+
+@media screen and (min-width: 350px) {
+
+  .main-message {
+    transform: translateY(40%);
+  }
+
+}
+
+@media screen and (min-width: 470px) {
+
+  .mountain::before {
+    height: 9.4rem;
+    background: url("images/wave-medium.png");
+    background-size: cover;
+  }
+
+  .wambodajwogo::before {
+    height: 9.4rem;
+    background: url("images/wave-medium-reversed.png");
+    background-size: cover;
+  }
+
+  .wambodajwogo {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(1deg, rgba(118, 126, 118, 0.4) 20%, rgba(40, 41, 40, 0.9) 100%), url("images/wambodajwogo.jpg") center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    height: 8rem;
+  }
+  .nav-brand {
+    width: 3.5rem;
+  }
+  .nav-list {
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    flex-direction: row;
+    transition: initial;
+  }
+  .menu-icons {
+    display: none;
+  }
+
+  .nav-item {
+    margin: 0 2.5rem;
+  }
+
+  .nav-link,
+  .current {
+    color: #fafafa;
+    position: relative;
+    font-size: 1.3rem;
+  }
+
+  .nav-link::before,
+  .current::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    background-color: #b7410e;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms;
+  }
+
+  .current::before {
+    transform: scaleX(1);
+  }
+
+  .nav-link:hover::before {
+    transform: scale(1);
+  }
+
+  .mountain {
+    height: 60vh;
+  }
+
+  .main-message {
+    transform: translateY(50%);
+  }
+
+  /* .nav-link {
+    font-size: 1.5rem;
+  } */
+
+  .main-message h3 {
+    font-size: 2rem;
+  }
+
+  .main-message h1 {
+    font-size: 5rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  .title-heading h3 {
+    font-size: 2rem;
+  }
+
+  .title-heading h1 {
+    font-size: 3rem;
+  }
+
+  .title-heading p {
+    font-size: 1.8rem;
+  }
+
+  .activities-grid-item i {
+    font-size: 7rem;
+  }
+
+  .activities-grid-item h1 {
+    font-size: 2rem;
+  }
+
+  .wambodajwogo-text p {
+    font-size: 2rem;
+  }
+
+  .wambodajwogo-text i {
+    font-size: 15rem;
+    top: -12rem;
+  }
+
+  .wambodajwogo-text h1 {
+    font-size: 4rem;
+  }
+
+  .bottom-title h3 {
+    font-size: 2rem;
+  }
+
+  .bottom-title h1 {
+    font-size: 3rem;
+  }
+
+  .bottom-title p {
+    font-size: 1.8rem;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  .mountain::before {
+    height: 22.7rem;
+    background: url("images/wave-large.png");
+    background-size: cover;
+  }
+
+  .mountain {
+    height: 75vh;
+  }
+
+  .wambodajwogo::before {
+    height: 22.7rem;
+    background: url("images/wave-large-reversed.png");
+    background-size: cover;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .mountain {
+    height: 75vh;
+    padding-bottom: 50rem;
+  }
+
+  .main-message h3 {
+    font-size: 2.5rem;
+  }
+
+  .main-message h1 {
+    font-size: 7rem;
+  }
+
+  .title-heading h3 {
+    font-size: 2.5rem;
+  }
+
+  .title-heading h1 {
+    font-size: 4rem;
+  }
+
+  .title-heading p {
+    font-size: 2rem;
+  }
+
+  .activities-grid-item i {
+    font-size: 8.5rem;
+  }
+
+  .activities-grid-item h1 {
+    font-size: 2.5rem;
+  }
+
+  .wambodajwogo-text p {
+    font-size: 3rem;
+  }
+
+  .wambodajwogo-text i {
+    font-size: 20rem;
+    top: -15rem;
+  }
+
+  .wambodajwogo-text h1 {
+    font-size: 5rem;
+  }
+
+  .bottom-title h3 {
+    font-size: 2.5rem;
+  }
+
+  .bottom-title h1 {
+    font-size: 4rem;
+  }
+
+  .bottom-title p {
+    font-size: 2rem;
+  }
+
+}
