@@ -1,2 +1,2 @@
 # Tokewanna
-I love the outdoors and hikes so I created a website simulating hiking guides in Utah. I do not own these images or a mountain guide company this is a practice project
+I love the outdoors and hikes so I created a website simulating hiking guides in Utah. I do not own these images or a mountain guide company this is a practice project.
